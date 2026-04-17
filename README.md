@@ -37,6 +37,13 @@ Com base nos dados obtidos, selecione uma prática ou dado de teste relevante e 
 
 ## Respostas
 
-**1. Repositório selecionado:** `https://github.com/colinhacks/zod`
+**1. Repositório selecionado:** https://github.com/colinhacks/zod
 
-**2. Explicação:** `<SUA_EXPLICAÇÃO_AQUI>`
+**2. Explicação:** 
+Zod é uma biblioteca que permite validar dados e definir schemas em TypeScript, garantindo que os dados estejam no formato esperado. 
+
+Ao analisar o overview dado pelo TestMiner, um ponto que chamou atenção foi a proporção entre a quantidade de testes (168) e a quantidade de arquivos de código-fonte (321), o que pode ser um indicativo de que a biblioteca é madura e confiável. Essa percepção está relacionada a cobertura de testes que apesar de não ser um indicador absoluto de qualidade, se mostra relevante por abranger diferentes classes como async, object, schema e helpers, além de incluir até testes para mocks (na imagem abaixo é possível ver um “teste de CI”, mas isso foi um falso positivo devido ao nome do arquivo test.yml que é só mais uma configuração do CI).
+
+Ao conferir alguns testes, é possível observar a presença tanto de testes unitários quanto de integração. Pela natureza do que a lib se propõe, não faz muito sentido aplicar testes end-to-end, já que ela não representa uma aplicação completa com fluxo de usuário. Assim, foi possível concluir que o foco dado está nos testes que são mais adequados para validar o comportamento de funções e a composição de schemas, ou seja, nos unitários e de integração. 
+
+![TestMiner overview](overview.png)
